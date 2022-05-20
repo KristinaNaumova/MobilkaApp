@@ -5,4 +5,12 @@
     <string name="close">Close</string>
     <string name="open">Open</string>
     <string name="var">var</string>
+    <string-array name="spInit">
+        <item>></item>
+        <item>&lt;</item>
+        <item>>=</item>
+        <item>&lt;=</item>
+        <item>!=</item>
+        <item>=</item>
+    </string-array>
 </resources>

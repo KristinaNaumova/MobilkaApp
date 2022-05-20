@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:backgroundTint="#B460C3"
+        android:backgroundTint="#A327B8"
         android:orientation="horizontal"
         android:background="@drawable/round_style"
         android:padding="5dp">
@@ -36,13 +36,17 @@
             android:hint="@string/var"
             android:inputType="text"
             android:textSize="15sp" />
+
+
         <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="30dp"
+            android:id="@+id/spInit"
+            android:layout_width="50dp"
             android:layout_height="30dp"
-            android:spinnerMode="dropdown"
-            tools:layout_editor_absoluteX="60dp"
-            tools:layout_editor_absoluteY="20dp" />
+            android:entries="@array/spInit"
+            android:gravity="center_horizontal"
+            android:spinnerMode="dropdown" >
+        </Spinner>
+
 
         <EditText
             android:id="@+id/if_block_condition"

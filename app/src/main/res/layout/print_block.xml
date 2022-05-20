@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:backgroundTint="@color/purple_200"
@@ -9,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:backgroundTint="#B460C3"
+        android:backgroundTint="#A327B8"
         android:orientation="horizontal"
         android:background="@drawable/round_style"
         android:padding="5dp">
@@ -35,6 +36,12 @@
             android:hint="condition"
             android:inputType="text"
             android:textSize="15sp" />
+        <Button
+            android:id="@+id/deleteBlock"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:foreground="@android:drawable/btn_dialog"
+            tools:ignore="UnusedAttribute" />
 
 
     </LinearLayout>

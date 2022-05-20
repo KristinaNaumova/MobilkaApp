@@ -9,9 +9,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:backgroundTint="#B460C3"
-        android:orientation="horizontal"
         android:background="@drawable/round_style"
+        android:backgroundTint="#A327B8"
+        android:orientation="horizontal"
         android:padding="5dp">
 
 
@@ -21,9 +21,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/round_style"
             android:backgroundTint="#DF6158"
-            android:padding="5dp"
             android:hint="name"
             android:inputType="text"
+            android:padding="5dp"
 
             android:textSize="15sp" />
 
@@ -44,9 +44,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/round_style"
             android:backgroundTint="#DF6158"
-            android:padding="5dp"
             android:hint="value"
             android:inputType="text"
+            android:padding="5dp"
             android:textSize="15sp" />
     </LinearLayout>
 

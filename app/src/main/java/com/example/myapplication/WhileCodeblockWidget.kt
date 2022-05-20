@@ -4,7 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 
-class WhileCodeblockWidget(context: Context) {
+class WhileCodeblockWidget(context: Context) : BaseWidget() {
+    var view: View
 
-    var view: View = LayoutInflater.from(context).inflate(R.layout.while_block,null,false)
+    init {
+        view = LayoutInflater.from(context).inflate(R.layout.while_block,null,false)
+        super.onInit(view)
+    }
 }
