@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"
+        />
+
+    <item android:title="Blocks">
+        <menu>
+            <item
+                android:id="@+id/nav_intVar"
+                android:title="Initialization"
+                />
+            <item
+                android:id="@+id/nav_assignValtoVar"
+                android:title="Assignment "
+                />
+            <item
+                android:id="@+id/nav_while"
+                android:title="While"
+                />
+            <item
+                android:id="@+id/nav_if"
+                android:title="If"
+                />
+            <item
+                android:id="@+id/nav_print"
+                android:title="Print"
+                />
+        </menu>
+    </item>
+
+
+
+</menu>
