@@ -4,6 +4,12 @@
     tools:showIn="navigation_view">
 
     <item
+        android:id="@+id/nav_start"
+        android:icon="@drawable/ic_play"
+        android:title="Start"
+        />
+
+    <item
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="Home"
@@ -30,6 +36,10 @@
             <item
                 android:id="@+id/nav_print"
                 android:title="Print"
+                />
+            <item
+                android:id="@+id/nav_end"
+                android:title="End"
                 />
         </menu>
     </item>

@@ -12,8 +12,8 @@
         android:layout_height="match_parent"
         android:id="@+id/codeBlockName"
         android:textSize="20dp"
-        android:text="Codeblock"
-        android:textColor="#D2FFA101"
+        android:text="@string/codeblock"
+        android:textColor="#8B1E9E"
         android:textStyle="bold"
         />
 </LinearLayout>

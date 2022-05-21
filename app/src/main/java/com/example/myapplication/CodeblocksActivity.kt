@@ -15,7 +15,7 @@ import androidx.core.view.allViews
 import androidx.core.view.get
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
-
+import kotlinx.android.synthetic.main.activity_codeblocks.*
 
 
 class CodeblocksActivity : AppCompatActivity() {
@@ -88,6 +88,7 @@ class CodeblocksActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
             when(it.itemId)
             {   R.id.nav_home->{ Toast.makeText(applicationContext,"Clicked Home",Toast.LENGTH_SHORT).show();   finish()}
+                R.id.nav_start->{ start()}
                 R.id.nav_intVar-> {
                     addInitCodeblockView()
                     Toast.makeText(applicationContext,"Created Integer variable",Toast.LENGTH_SHORT).show();
@@ -107,6 +108,10 @@ class CodeblocksActivity : AppCompatActivity() {
                 R.id.nav_print-> {
                     addPrintCodeblockView()
                     Toast.makeText(applicationContext,"Created Output Expression",Toast.LENGTH_SHORT).show();
+                }
+                R.id.nav_end-> {
+                    addEndCodeblockView()
+                    Toast.makeText(applicationContext,"Created End Block",Toast.LENGTH_SHORT).show();
                 }
             }
             true
@@ -219,5 +224,21 @@ class CodeblocksActivity : AppCompatActivity() {
             return
         }
         cellArray[index].addView(subView.view)
+    }
+    private fun addEndCodeblockView() {
+        val subView = End_block(this)
+        val index = findFreeCellIndex()
+        if (index == -1) {
+            return
+        }
+        cellArray[index].addView(subView.view)
+    }
+    private fun start(){
+        val inputStr=""
+        val lexer=Lexer(inputStr)//инициализация-конструктор
+        val parser=Parser(lexer)//инициализация-конструктор
+        val interpreter=Interpreter(parser)//инициализация-конструктор
+        interpreter.startAnalyze()
+        //textView.text = interpreter.outputStr
     }
 }

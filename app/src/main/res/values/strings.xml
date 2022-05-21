@@ -9,12 +9,7 @@
     <string name="value">value</string>
     <string name="equel">=</string>
     <string name="text">text</string>
-    <string-array name="spInit">
-        <item>></item>
-        <item>&lt;</item>
-        <item>>=</item>
-        <item>&lt;=</item>
-        <item>!=</item>
-        <item>=</item>
-    </string-array>
+    <string name="end">end</string>
+    <string name="condition">condition</string>
+    <string name="codeblock">CodeBlock</string>
 </resources>

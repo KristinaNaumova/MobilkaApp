@@ -2,9 +2,9 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_gravity="center"
     android:backgroundTint="#55718a"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white">
+    android:background="@color/gray_400">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -22,33 +22,9 @@
             android:background="@drawable/round_style"
             android:backgroundTint="#DACE69"
             android:padding="5dp"
-            android:text = "If ("
+            android:text="@string/end"
             android:textColor="@color/black"
             android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/if_block_var"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_style"
-            android:backgroundTint="#DF6158"
-            android:padding="5dp"
-            android:hint="@string/condition"
-            android:inputType="text"
-            android:textSize="15sp" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:background="@drawable/round_style"
-            android:backgroundTint="#DACE69"
-            android:padding="5dp"
-            android:text=") :"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
 
     </LinearLayout>
 

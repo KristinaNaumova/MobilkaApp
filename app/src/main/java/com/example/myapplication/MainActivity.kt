@@ -25,11 +25,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btnQuit = findViewById(R.id.btnQuit)
-        btnQuit.setOnClickListener {
-            finish()
-        }
 
-        btnGuide = findViewById(R.id.btnGuide)
     }
 }

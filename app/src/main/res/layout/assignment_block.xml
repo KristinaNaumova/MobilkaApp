@@ -2,16 +2,16 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/white"
-    android:backgroundTint="@color/purple_200">
+    android:backgroundTint="#55718a"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:background="@drawable/round_style"
-        android:backgroundTint="#A327B8"
+        android:backgroundTint="#B460C3"
         android:orientation="horizontal"
+        android:background="@drawable/round_style"
         android:padding="5dp">
 
 
@@ -21,9 +21,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/round_style"
             android:backgroundTint="#DF6158"
+            android:padding="5dp"
             android:hint="@string/name"
             android:inputType="text"
-            android:padding="5dp"
 
             android:textSize="15sp" />
 
@@ -44,9 +44,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/round_style"
             android:backgroundTint="#DF6158"
+            android:padding="5dp"
             android:hint="@string/value"
             android:inputType="text"
-            android:padding="5dp"
             android:textSize="15sp" />
     </LinearLayout>
 
