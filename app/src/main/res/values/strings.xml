@@ -5,6 +5,10 @@
     <string name="close">Close</string>
     <string name="open">Open</string>
     <string name="var">var</string>
+    <string name="name">name</string>
+    <string name="value">value</string>
+    <string name="equel">=</string>
+    <string name="text">text</string>
     <string-array name="spInit">
         <item>></item>
         <item>&lt;</item>
