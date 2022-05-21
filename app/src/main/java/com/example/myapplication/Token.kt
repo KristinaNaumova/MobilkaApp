@@ -2,7 +2,7 @@ package com.example.myapplication
 
 class Token(var type: String, var value: String?)
 
-enum class TypeToken(val typeName:String){
+enum class TypeToken(val typeName: String) {
     INTEGER("INTEGER"),
     PLUS("PLUS"),
     MINUS("MINUS"),
@@ -24,4 +24,11 @@ enum class TypeToken(val typeName:String){
     WHILE("WHILE")
 }
 
-val KEYWORDS= mutableMapOf("BEGIN" to "BEGIN","END" to "END","LOG" to "LOG","IF" to "IF","IFELSE" to "IFELSE","WHILE" to "WHILE")
+val KEYWORDS = mutableMapOf(
+    "BEGIN" to "BEGIN",
+    "END" to "END",
+    "LOG" to "LOG",
+    "IF" to "IF",
+    "IFELSE" to "IFELSE",
+    "WHILE" to "WHILE"
+)

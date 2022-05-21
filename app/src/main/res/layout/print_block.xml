@@ -2,16 +2,16 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:backgroundTint="#55718a"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:backgroundTint="#55718a">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:background="@drawable/round_style"
         android:backgroundTint="#B460C3"
         android:orientation="horizontal"
-        android:background="@drawable/round_style"
         android:padding="5dp">
 
         <TextView
@@ -31,12 +31,10 @@
             android:layout_height="wrap_content"
             android:background="@drawable/round_style"
             android:backgroundTint="#DF6158"
-            android:padding="5dp"
             android:hint="@string/condition"
             android:inputType="text"
+            android:padding="5dp"
             android:textSize="15sp" />
-
-
     </LinearLayout>
 
 </FrameLayout>

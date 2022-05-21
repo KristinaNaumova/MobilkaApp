@@ -8,7 +8,7 @@ class InitCodeblockWidget(context: Context) : BaseWidget() {
     var view: View
 
     init {
-        view = LayoutInflater.from(context).inflate(R.layout.init_codeblock,null,false)
+        view = LayoutInflater.from(context).inflate(R.layout.init_codeblock, null, false)
         super.onInit(view)
     }
 }

@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         container = findViewById(R.id.container)
 
         btnStart = findViewById(R.id.btnStart)
-        btnStart.setOnClickListener(){
+        btnStart.setOnClickListener() {
             val intent = Intent(this, CodeblocksActivity::class.java)
             startActivity(intent)
         }

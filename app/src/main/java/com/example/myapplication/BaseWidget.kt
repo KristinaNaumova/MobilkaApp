@@ -15,9 +15,9 @@ open class BaseWidget() {
             val clipText = "drag and drop"
             val item = ClipData.Item(clipText)
             val mimeTypes = arrayOf(ClipDescription.MIMETYPE_TEXT_PLAIN)
-            val clipData = ClipData(clipText,mimeTypes,item)
+            val clipData = ClipData(clipText, mimeTypes, item)
             val dragShadowBuilder = View.DragShadowBuilder(it)
-            it.startDragAndDrop(clipData,dragShadowBuilder,it,0)
+            it.startDragAndDrop(clipData, dragShadowBuilder, it, 0)
             //it.visibility = View.INVISIBLE
             true
         }

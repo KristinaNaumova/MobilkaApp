@@ -6,44 +6,35 @@
     <item
         android:id="@+id/nav_start"
         android:icon="@drawable/ic_play"
-        android:title="Start"
-        />
+        android:title="Start" />
 
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="Home"
-        />
+        android:title="Home" />
 
     <item android:title="Blocks">
         <menu>
             <item
                 android:id="@+id/nav_intVar"
-                android:title="Initialization"
-                />
+                android:title="Initialization" />
             <item
                 android:id="@+id/nav_assignValtoVar"
-                android:title="Assignment "
-                />
+                android:title="Assignment " />
             <item
                 android:id="@+id/nav_while"
-                android:title="While"
-                />
+                android:title="While" />
             <item
                 android:id="@+id/nav_if"
-                android:title="If"
-                />
+                android:title="If" />
             <item
                 android:id="@+id/nav_print"
-                android:title="Print"
-                />
+                android:title="Print" />
             <item
                 android:id="@+id/nav_end"
-                android:title="End"
-                />
+                android:title="End" />
         </menu>
     </item>
-
 
 
 </menu>

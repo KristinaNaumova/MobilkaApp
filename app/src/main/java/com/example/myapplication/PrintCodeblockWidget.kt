@@ -8,7 +8,7 @@ class PrintCodeblockWidget(context: Context) : BaseWidget() {
     var view: View
 
     init {
-        view = LayoutInflater.from(context).inflate(R.layout.print_block,null,false)
+        view = LayoutInflater.from(context).inflate(R.layout.print_block, null, false)
         super.onInit(view)
     }
 }

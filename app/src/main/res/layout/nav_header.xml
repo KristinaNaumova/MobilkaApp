@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_marginTop="16dp"
     android:layout_marginStart="16dp"
-    android:background="@color/white">
+    android:layout_marginTop="16dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
     <TextView
+        android:id="@+id/codeBlockName"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/codeBlockName"
-        android:textSize="20dp"
         android:text="@string/codeblock"
         android:textColor="#8B1E9E"
-        android:textStyle="bold"
-        />
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
 </LinearLayout>

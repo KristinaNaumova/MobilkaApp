@@ -1,9 +1,6 @@
 package com.example.myapplication
 
 
-
-///gbhjnkml,
-
 import android.content.ClipDescription
 import android.os.Bundle
 import android.view.*
@@ -27,7 +24,7 @@ class CodeblocksActivity : AppCompatActivity() {
     private lateinit var cellArray: Array<LinearLayout>
 
     private val dragListener = View.OnDragListener { view, event ->
-        when(event.action) {
+        when (event.action) {
             DragEvent.ACTION_DRAG_STARTED -> {
                 event.clipDescription.hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)
                 true
@@ -48,14 +45,12 @@ class CodeblocksActivity : AppCompatActivity() {
                 val source = v.parent as ViewGroup
 
                 val destination = view as LinearLayout
-                if(isCellFree(destination))
-                {
+                if (isCellFree(destination)) {
                     source.removeView(v)
                     destination.addView(v)
                     v.visibility = View.VISIBLE
                     true
-                }
-                else {
+                } else {
                     false
                 }
             }
@@ -78,7 +73,7 @@ class CodeblocksActivity : AppCompatActivity() {
         initializeTable()
         setOnDragListenerToTable()
 
-        toggle = ActionBarDrawerToggle (this,drawerLayout,R.string.open,R.string.close)
+        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -86,32 +81,54 @@ class CodeblocksActivity : AppCompatActivity() {
 
         navView = findViewById(R.id.navView)
         navView.setNavigationItemSelectedListener {
-            when(it.itemId)
-            {   R.id.nav_home->{ Toast.makeText(applicationContext,"Clicked Home",Toast.LENGTH_SHORT).show();   finish()}
-                R.id.nav_start->{ start()}
-                R.id.nav_intVar-> {
+            when (it.itemId) {
+                R.id.nav_home -> {
+                    Toast.makeText(applicationContext, "Clicked Home", Toast.LENGTH_SHORT)
+                        .show(); finish()
+                }
+                R.id.nav_start -> {
+                    start()
+                }
+                R.id.nav_intVar -> {
                     addInitCodeblockView()
-                    Toast.makeText(applicationContext,"Created Integer variable",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(
+                        applicationContext,
+                        "Created Integer variable",
+                        Toast.LENGTH_SHORT
+                    ).show();
                 }
-                R.id.nav_assignValtoVar->{
+                R.id.nav_assignValtoVar -> {
                     addIntCodeblockView()
-                    Toast.makeText(applicationContext,"Created Assigning value",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(
+                        applicationContext,
+                        "Created Assigning value",
+                        Toast.LENGTH_SHORT
+                    ).show();
                 }
-                R.id.nav_while-> {
+                R.id.nav_while -> {
                     addWhileCodeblockView()
-                    Toast.makeText(applicationContext,"Created While Expression",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(
+                        applicationContext,
+                        "Created While Expression",
+                        Toast.LENGTH_SHORT
+                    ).show();
                 }
-                R.id.nav_if-> {
+                R.id.nav_if -> {
                     addIfCodeblockView()
-                    Toast.makeText(applicationContext,"Created If",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, "Created If", Toast.LENGTH_SHORT).show()
                 }
-                R.id.nav_print-> {
+                R.id.nav_print -> {
                     addPrintCodeblockView()
-                    Toast.makeText(applicationContext,"Created Output Expression",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(
+                        applicationContext,
+                        "Created Output Expression",
+                        Toast.LENGTH_SHORT
+                    ).show();
                 }
-                R.id.nav_end-> {
+                R.id.nav_end -> {
                     addEndCodeblockView()
-                    Toast.makeText(applicationContext,"Created End Block",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(applicationContext, "Created End Block", Toast.LENGTH_SHORT)
+                        .show();
                 }
             }
             true
@@ -120,37 +137,50 @@ class CodeblocksActivity : AppCompatActivity() {
     }
 
     private fun initializeTable() {
-        val cell1:LinearLayout = findViewById(R.id.cell_1)
-        val cell2:LinearLayout = findViewById(R.id.cell_2)
-        val cell3:LinearLayout = findViewById(R.id.cell_3)
-        val cell4:LinearLayout = findViewById(R.id.cell_4)
-        val cell5:LinearLayout = findViewById(R.id.cell_5)
-        val cell6:LinearLayout = findViewById(R.id.cell_6)
-        val cell7:LinearLayout = findViewById(R.id.cell_7)
-        val cell8:LinearLayout = findViewById(R.id.cell_8)
-        val cell9:LinearLayout = findViewById(R.id.cell_9)
-        val cell10:LinearLayout = findViewById(R.id.cell_10)
-        val cell11:LinearLayout = findViewById(R.id.cell_11)
-        val cell12:LinearLayout = findViewById(R.id.cell_12)
-        cellArray = arrayOf(cell1,cell2,cell3,cell4,cell5,cell6,cell7,cell8, cell9, cell10, cell11, cell12)
+        val cell1: LinearLayout = findViewById(R.id.cell_1)
+        val cell2: LinearLayout = findViewById(R.id.cell_2)
+        val cell3: LinearLayout = findViewById(R.id.cell_3)
+        val cell4: LinearLayout = findViewById(R.id.cell_4)
+        val cell5: LinearLayout = findViewById(R.id.cell_5)
+        val cell6: LinearLayout = findViewById(R.id.cell_6)
+        val cell7: LinearLayout = findViewById(R.id.cell_7)
+        val cell8: LinearLayout = findViewById(R.id.cell_8)
+        val cell9: LinearLayout = findViewById(R.id.cell_9)
+        val cell10: LinearLayout = findViewById(R.id.cell_10)
+        val cell11: LinearLayout = findViewById(R.id.cell_11)
+        val cell12: LinearLayout = findViewById(R.id.cell_12)
+        cellArray = arrayOf(
+            cell1,
+            cell2,
+            cell3,
+            cell4,
+            cell5,
+            cell6,
+            cell7,
+            cell8,
+            cell9,
+            cell10,
+            cell11,
+            cell12
+        )
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.toolbar_menu,menu)
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
 
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        if(toggle.onOptionsItemSelected(item))
+        if (toggle.onOptionsItemSelected(item))
             return true
 
         return super.onOptionsItemSelected(item)
     }
 
     private fun setOnDragListenerToTable() {
-        for (cell in cellArray){
+        for (cell in cellArray) {
             cell.setOnDragListener(dragListener)
         }
     }
@@ -217,6 +247,7 @@ class CodeblocksActivity : AppCompatActivity() {
         }
         cellArray[index].addView(subView.view)
     }
+
     private fun addIntCodeblockView() {
         val subView = IntVarCodeblockWidget(this)
         val index = findFreeCellIndex()
@@ -225,6 +256,7 @@ class CodeblocksActivity : AppCompatActivity() {
         }
         cellArray[index].addView(subView.view)
     }
+
     private fun addEndCodeblockView() {
         val subView = End_block(this)
         val index = findFreeCellIndex()
@@ -233,11 +265,12 @@ class CodeblocksActivity : AppCompatActivity() {
         }
         cellArray[index].addView(subView.view)
     }
-    private fun start(){
-        val inputStr=""
-        val lexer=Lexer(inputStr)//инициализация-конструктор
-        val parser=Parser(lexer)//инициализация-конструктор
-        val interpreter=Interpreter(parser)//инициализация-конструктор
+
+    private fun start() {
+        val inputStr = ""
+        val lexer = Lexer(inputStr)//инициализация-конструктор
+        val parser = Parser(lexer)//инициализация-конструктор
+        val interpreter = Interpreter(parser)//инициализация-конструктор
         interpreter.startAnalyze()
         //textView.text = interpreter.outputStr
     }
